@@ -41,7 +41,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://jetquestsubhajit.netlify.app/api/auth/login', formData, { withCredentials: true });
+      const response = await axios.post('https://flight-backend-hc4f.onrender.com/api/auth/login', formData, { withCredentials: true });
       console.log('User logged in:', response.data);
       // Dispatch the user data to the Redux store
       dispatch(setUser(response.data.user)); // Assuming the response contains the user object
