@@ -21,7 +21,7 @@ function AdminLogin() {
     e.preventDefault();
     try {
       // Include withCredentials to send cookies
-      const response = await axios.post('http://localhost:3000/api/auth/admin-login', formData, {
+      const response = await axios.post('https://jetquestsubhajit.netlify.app/api/auth/admin-login', formData, {
         withCredentials: true, // Important to include credentials (cookies)
       });
       console.log('Admin logged in:', response.data);
