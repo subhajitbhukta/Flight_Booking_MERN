@@ -52,7 +52,7 @@ function Booking() {
 
     try {
       setLoading(true);
-      const response = await fetch('https://jetquestsubhajit.netlify.app/api/bookings', {
+      const response = await fetch('https://flight-backend-hc4f.onrender.com/api/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
