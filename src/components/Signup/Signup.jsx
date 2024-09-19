@@ -24,7 +24,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/signup', formData);
+      const response = await axios.post('https://jetquestsubhajit.netlify.app/api/auth/signup', formData);
       console.log('User created:', response.data);
       setSuccessMessage('Signup successful, Please login with your account');
       setFormData({
