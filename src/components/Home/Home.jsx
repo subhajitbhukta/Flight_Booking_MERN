@@ -34,7 +34,7 @@ function Home() {
       dispatch(setSearchParams({ from, to, departureDate, tripType }));
 
       // Fetch flights data from the API
-      const response = await axios.get('http://localhost:3000/api/flights');
+      const response = await axios.get('https://jetquestsubhajit.netlify.app');
 
 
       // Dispatch the fetched flights to the Redux store
