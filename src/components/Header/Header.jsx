@@ -12,7 +12,7 @@ function Header() {
 
     const handleLogout = async () => {
         try {
-            await axios.get('https://jetquestsubhajit.netlify.app/api/auth/logout', { withCredentials: true }); // JWT: use POST if required
+            await axios.get('https://flight-backend-hc4f.onrender.com/api/auth/logout', { withCredentials: true }); // JWT: use POST if required
             dispatch(clearUser()); // Clear user in Redux state
             setShowNotification(true); // Show logout success notification
             setTimeout(() => {
