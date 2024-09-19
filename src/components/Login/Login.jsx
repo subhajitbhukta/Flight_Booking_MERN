@@ -41,7 +41,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/login', formData, { withCredentials: true });
+      const response = await axios.post('https://jetquestsubhajit.netlify.app/api/auth/login', formData, { withCredentials: true });
       console.log('User logged in:', response.data);
       // Dispatch the user data to the Redux store
       dispatch(setUser(response.data.user)); // Assuming the response contains the user object
@@ -64,7 +64,7 @@ function Login() {
   const handleForgotPasswordSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:3000/api/auth/forgot-password', { email: forgotPasswordEmail });
+      const { data } = await axios.post('https://jetquestsubhajit.netlify.app/api/auth/forgot-password', { email: forgotPasswordEmail });
       console.log('Response:', data); // Use the response in some way
       setForgotPasswordMessage('Password reset link sent to your email');
       setShowOTPModal(true); // Show OTP modal after sending reset link
@@ -77,7 +77,7 @@ function Login() {
   const handleOTPSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/verify-otp', {
+      const response = await axios.post('https://jetquestsubhajit.netlify.app/api/auth/verify-otp', {
         email: forgotPasswordEmail, // Include the email
         otp,
         newPassword
