@@ -24,7 +24,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/bookings', { withCredentials: true });
+        const response = await axios.get('https://jetquestsubhajit.netlify.app/api/bookings', { withCredentials: true });
         setBookings(response.data);
         setLoading(false);
       } catch (error) {
@@ -38,7 +38,7 @@ function AdminDashboard() {
 
   const handleLogout = async () => {
     try {
-      await axios.get('http://localhost:3000/api/auth/logout', { withCredentials: true });
+      await axios.get('https://jetquestsubhajit.netlify.app/api/auth/logout', { withCredentials: true });
       setLogoutMessage('You have successfully logged out.');
       setTimeout(() => {
         navigate('/admin-login');
@@ -57,7 +57,7 @@ function AdminDashboard() {
   const confirmDelete = async () => {
     if (bookingToDelete) {
       try {
-        await axios.delete(`http://localhost:3000/api/bookings/${bookingToDelete}`, { withCredentials: true });
+        await axios.delete(`https://jetquestsubhajit.netlify.app/api/bookings/${bookingToDelete}`, { withCredentials: true });
         setBookings(bookings.filter(booking => booking._id !== bookingToDelete));
         setIsDeleteModalOpen(false);
       } catch (error) {
