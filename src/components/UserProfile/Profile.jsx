@@ -10,7 +10,7 @@ function Profile() {
       if (!user) return;
 
       try {
-        const response = await fetch(`https://jetquestsubhajit.netlify.app/api/bookings/user/${user._id}/bookings`, {
+        const response = await fetch(`https://flight-backend-hc4f.onrender.com/api/bookings/user/${user._id}/bookings`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
