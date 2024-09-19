@@ -64,7 +64,7 @@ function Login() {
   const handleForgotPasswordSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('https://jetquestsubhajit.netlify.app/api/auth/forgot-password', { email: forgotPasswordEmail });
+      const { data } = await axios.post('https://flight-backend-hc4f.onrender.com/api/auth/forgot-password', { email: forgotPasswordEmail });
       console.log('Response:', data); // Use the response in some way
       setForgotPasswordMessage('Password reset link sent to your email');
       setShowOTPModal(true); // Show OTP modal after sending reset link
@@ -77,7 +77,7 @@ function Login() {
   const handleOTPSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://jetquestsubhajit.netlify.app/api/auth/verify-otp', {
+      const response = await axios.post('https://flight-backend-hc4f.onrender.com/api/auth/verify-otp', {
         email: forgotPasswordEmail, // Include the email
         otp,
         newPassword
