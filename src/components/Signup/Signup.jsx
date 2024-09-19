@@ -65,12 +65,6 @@ function Signup() {
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-200 to-indigo-200">
         <div className="bg-white rounded-xl shadow-xl p-8 max-w-sm w-full max-sm:m-8">
           <h1 className="text-2xl font-bold text-center mb-4">Sign Up</h1>
-          <div className="flex justify-center mb-4">
-            <a href="#" className="mx-2 text-xl text-gray-600 hover:text-red-600"><FaGooglePlusG /></a>
-            <a href="#" className="mx-2 text-xl text-gray-600 hover:text-blue-600"><FaFacebookF /></a>
-            <a href="#" className="mx-2 text-xl text-gray-600 hover:text-black"><FaGithub /></a>
-            <a href="#" className="mx-2 text-xl text-gray-600 hover:text-blue-700"><FaLinkedinIn /></a>
-          </div>
           <span className="block text-sm text-center mb-4">Or use your email for registration</span>
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <input type="text" name="name" placeholder="Name" className="mb-2 p-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300" value={formData.name} onChange={handleChange} />
